@@ -2,12 +2,11 @@ import pandas as pd
 import numpy as np
 
 # Load dataset
-df = pd.read_csv("D:\\mental-health-prediction\\data\\Suicide_Detection.csv")
+df = pd.read_csv("D:\\mental-health-prediction\\Suicide_Detection.csv")
 
-print("Shape:", df.shape)
+print("\nClass Distribution:")
+print(df['class'].value_counts())
+print("\nClass Distribution Proportion:")
+print(df['class'].value_counts(normalize=True))
 
-print("Columns:", df.columns.tolist())
 
-print(df.head())
-
-print(df.info())
